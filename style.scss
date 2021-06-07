@@ -1,0 +1,52 @@
+/* import */
+@import "./button.scss";
+
+p{
+	background-color: red;
+}
+
+body {
+	 background-color: pink;
+	 color: #000;
+}
+
+.teste {
+	  p{
+	 	  background-color: pink;
+	  }
+    
+     h5{
+	 	  font-size: 20px;
+	  }
+    
+	  &:hover{
+	 	  background: #fff; /* quando passar o mouse sobre a classe teste*/
+	 	  color: royalblue;
+	  }  
+    
+}   
+
+
+
+
+/* variavl e import 
+ * lembrando que o @import tem que vim sempre no comeco do arquivo
+ * */
+
+/* variaveis */
+$color-orange: orange;
+$tamanho-fonte: 1.2rem;
+
+
+/* usando o @mixin. e lembrando o @extend .btn eu estou herdando as propriedades do .btn la em cima so vou usar a cor do @mixn */
+/* Mixin 
+ * depois do @mixin posso colocar qualquer nome basicamente e um funcao
+ *  e dentro do ( sao os paramentros )
+ *
+ *  quando for usar o mixin tem que colocar no elemento aonde vai ser usado o @include
+ *  p{@include onomedo mixin(e aqui dentro os valores separados por virgula)}
+ * */
+@mixin button-style($background, $color){
+	background: $background;
+	color: $color;
+}

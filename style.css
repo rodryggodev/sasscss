@@ -1,0 +1,72 @@
+/* import */
+/* HERANCA EXTEND 
+ * lmebrando que btn e btn-laranja sao classes diferente, embora estejam name mesma linha do button la  no html.
+ *
+ * e que sempre que quisr herdar tem que ter o &, que .btn e a principal e
+ * que  &.btn-laranja vai herdar as propriedades dela
+ */
+/* variaveis */
+.btn, .btn-verde {
+  width: 200px;
+  padding: 10px 0;
+  background: none;
+  border-radius: 10px;
+  /* heranca */
+}
+.btn.btn-laranja, .btn-laranja.btn-verde {
+  background: #7486c0;
+  font-size: 1.2rem;
+}
+
+/*
+     usando extend 
+    .btn-laranja{
+     @extend .btn;
+     }
+ */
+/* usando o @mixin. e lembrando o @extend .btn eu estou herdando as propriedades do .btn la em cima so vou usar a cor do @mixn */
+/* Mixin 
+ * depois do @mixin posso colocar qualquer nome basicamente e um funcao
+ *  e dentro do ( sao os parametros )
+ * */
+.btn-verde {
+  font-size: 1.2rem;
+  background: green;
+  color: #000;
+}
+
+p {
+  background-color: red;
+}
+
+body {
+  background-color: pink;
+  color: #000;
+}
+
+.teste p {
+  background-color: pink;
+}
+.teste h5 {
+  font-size: 20px;
+}
+.teste:hover {
+  background: #fff;
+  /* quando passar o mouse sobre a classe teste*/
+  color: royalblue;
+}
+
+/* variavl e import 
+ * lembrando que o @import tem que vim sempre no comeco do arquivo
+ * */
+/* variaveis */
+/* usando o @mixin. e lembrando o @extend .btn eu estou herdando as propriedades do .btn la em cima so vou usar a cor do @mixn */
+/* Mixin 
+ * depois do @mixin posso colocar qualquer nome basicamente e um funcao
+ *  e dentro do ( sao os paramentros )
+ *
+ *  quando for usar o mixin tem que colocar no elemento aonde vai ser usado o @include
+ *  p{@include onomedo mixin(e aqui dentro os valores separados por virgula)}
+ * */
+
+/*# sourceMappingURL=style.css.map */

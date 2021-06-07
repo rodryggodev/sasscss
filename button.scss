@@ -1,0 +1,54 @@
+
+/* HERANCA EXTEND 
+ * lmebrando que btn e btn-laranja sao classes diferente, embora estejam name mesma linha do button la  no html.
+ *
+ * e que sempre que quisr herdar tem que ter o &, que .btn e a principal e
+ * que  &.btn-laranja vai herdar as propriedades dela
+ */
+
+/* variaveis */
+$color-orange: #7486c0;
+$tamanho-fonte: 1.2rem;
+$color-verde: green;
+
+
+
+.btn {
+	  width: 200px;
+	  padding: 10px 0;
+	  background: none;
+	  border-radius: 10px;
+    
+	  /* heranca */
+	  &.btn-laranja {
+	     	background: $color-orange;
+	      font-size: $tamanho-fonte;				
+	  }
+     
+	 
+}   
+
+
+ /*
+      usando extend 
+     .btn-laranja{
+	     @extend .btn;
+      }
+  */
+
+
+/* usando o @mixin. e lembrando o @extend .btn eu estou herdando as propriedades do .btn la em cima so vou usar a cor do @mixn */
+/* Mixin 
+ * depois do @mixin posso colocar qualquer nome basicamente e um funcao
+ *  e dentro do ( sao os paramentros )
+ * */
+@mixin button-style($background, $color){
+	background: $background;
+	color: $color;
+}
+.btn-verde{
+	@extend .btn;
+	font-size: $tamanho-fonte;
+   @include button-style($color-verde, #000);
+}
+
