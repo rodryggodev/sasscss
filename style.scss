@@ -50,3 +50,23 @@ $tamanho-fonte: 1.2rem;
 	background: $background;
 	color: $color;
 }
+
+
+/* funcoes no sass 
+ * Lembrando que o sass ja te funcoes pre definidas, e que tambem podemos criar nossas
+ * funcoes
+ * pelo que parece a funcao vem dentro o @mixin
+ * darken, saturate, mix essas sao as funcoes
+ * procurar mais funcoes e sor ir na documentacao do sass
+ *
+ * */
+/*
+@mixin button-style($background, $color){
+	background: $background;
+	color: $color;
+	&:hover {
+		/funcao/
+		background: darken($background, 20px);
+	}
+}
+*/

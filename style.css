@@ -27,12 +27,19 @@
 /* usando o @mixin. e lembrando o @extend .btn eu estou herdando as propriedades do .btn la em cima so vou usar a cor do @mixn */
 /* Mixin 
  * depois do @mixin posso colocar qualquer nome basicamente e um funcao
- *  e dentro do ( sao os parametros )
+ *  e dentro do ( sao os paramentros )
+ *
+ *  quando for usar o mixin tem que colocar no elemento aonde vai ser usado o @include
+ *  p{@include onomedo mixin(e aqui dentro os valores separados por virgula)}
  * */
 .btn-verde {
   font-size: 1.2rem;
   background: green;
   color: #000;
+}
+.btn-verde:hover {
+  /* funcao */
+  background: #001a00;
 }
 
 p {
@@ -68,5 +75,23 @@ body {
  *  quando for usar o mixin tem que colocar no elemento aonde vai ser usado o @include
  *  p{@include onomedo mixin(e aqui dentro os valores separados por virgula)}
  * */
+/* funcoes no sass 
+ * Lembrando que o sass ja te funcoes pre definidas, e que tambem podemos criar nossas
+ * funcoes
+ * pelo que parece a funcao vem dentro o @mixin
+ * darken, saturate, mix essas sao as funcoes
+ * procurar mais funcoes e sor ir na documentacao do sass
+ *
+ * */
+/*
+@mixin button-style($background, $color){
+	background: $background;
+	color: $color;
+	&:hover {
+		/funcao/
+		background: darken($background, 20px);
+	}
+}
+*/
 
 /*# sourceMappingURL=style.css.map */

@@ -29,3 +29,5 @@
 * sass --watch teste.scss:teste.css -> pra ele carrergar automaticamente sempre que alterar alguma propriedade no css.
 
 * sass --watch . ele vai processar todo os aquvos e pastas do diretorio raiz.
+
+# Quaquer duvi so consutar a documentacao

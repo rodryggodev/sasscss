@@ -41,10 +41,17 @@ $color-verde: green;
 /* Mixin 
  * depois do @mixin posso colocar qualquer nome basicamente e um funcao
  *  e dentro do ( sao os paramentros )
+ *
+ *  quando for usar o mixin tem que colocar no elemento aonde vai ser usado o @include
+ *  p{@include onomedo mixin(e aqui dentro os valores separados por virgula)}
  * */
 @mixin button-style($background, $color){
 	background: $background;
 	color: $color;
+	&:hover {
+		/* funcao */
+		background: darken($background, 20px);
+	}
 }
 .btn-verde{
 	@extend .btn;
